@@ -250,7 +250,7 @@ ls it_aint_here
 # Now, do the same thing but redirect _stderr_ into a file called `my_bad.txt`, and then catenate the contents of that file, and then remove it
 
 ```{bash}
-#Is there a way to do this in one line??
+#Is there a way to do this in fewer lines?
 ls it_aint_here 2> my_bad.txt
 cat my_bad.txt
 rm my_bad.txt
@@ -397,13 +397,30 @@ the file is not user-executable.
 
 ```{bash}
 ls -l count_files.sh
+chmod ug+x count_files.sh
 ```
 
+```{bash}
+ls -l count_files.sh
+```
 
 
 
 # Use chmod to change permissions of the files in the `silly` directory to match their names. For example for the first one you would use: `chmod 770 FILE-rwxrwx---`.  Use the octal specifiers to `chmod`. Do this for all 5 files (one chmod command for each), and at the end do `ls -l silly` to verify they are correct.
 
 ```{bash}
-
+ls -l silly
 ```
+
+```{bash}
+chmod g+w silly/DIRdrwxrwxr-x
+chmod o-r silly/FILE-rw-r-----
+chmod g+w silly/FILE-rw-rw-r--
+chmod u+x,o-r silly/FILE-rwxr-----
+chmod ug+x,g+w silly/FILE-rwxrwxr--
+```
+
+```{bash}
+ls -l silly
+```
+
