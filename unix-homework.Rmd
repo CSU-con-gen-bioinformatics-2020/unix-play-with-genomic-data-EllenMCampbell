@@ -89,9 +89,12 @@ ls -la
 # What are the other hidden files/directories that show up in the above listing? Just list them in the fenced text block below
 
 ```
-drwxr-xr-x  16 molecol  staff     544 Jan 29 10:02 .
+drwxr-xr-x  18 molecol  staff     612 Jan 30 12:38 .
 drwxr-xr-x   7 molecol  staff     238 Jan 29 10:02 ..
-drwxr-xr-x  12 molecol  staff     408 Jan 29 10:03 .git
+-rw-r--r--@  1 molecol  staff    6148 Jan 29 11:47 .DS_Store
+-rw-r--r--   1 molecol  staff      39 Jan 30 10:34 .Rhistory
+drwxr-xr-x   4 molecol  staff     136 Jan 29 10:02 .Rproj.user
+drwxr-xr-x  13 molecol  staff     442 Jan 30 12:42 .git
 -rw-r--r--   1 molecol  staff     126 Jan 29 10:02 .gitignore
 ```
 
@@ -293,6 +296,7 @@ wc sam/*
 # Note that gzcat will decompress all files you give it and send the output to _stdout_.  Knowing this, count how many lines are in all the `R1` files in `fastq` (after decompressing them into text files), and also count up all the lines in the `R1` files in `fastq`.  Note they should be the same.
 
 ```{bash}
+#Not sure I fully understand what two different things I'm supposed to be doing here. Don't think these two below should be the same.
 gzcat fastq/*R1* | wc
 wc fastq/*R1*
 ```
