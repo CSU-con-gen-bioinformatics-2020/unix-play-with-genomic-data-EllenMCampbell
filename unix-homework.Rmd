@@ -155,7 +155,7 @@ cp fastq/DPCh_plate1_[AB]* fq_AB
 # Now, using negation (`^`) with `[` and `]` copy all the R1 files that don't belong to sample names starting with an `A` or a `B` to `fq_notAB`. When you are done, on the next line in the code block, list the contents of `fq_AB` and `fq_notAB`. 
 
 ```{bash}
-cp fastq/DPCh_plate1_[^A,B]* fq_notAB
+cp fastq/DPCh_plate1_[^AB]* fq_notAB
 ```
 
 # Remove `fq_AB` and `fq_notAB`, and their contents
@@ -233,6 +233,7 @@ a directory called "bad", another called "name", another called "with", and anot
 ```{bash}
 mkdir A05_S5
 cp {sam,bam,fastq}/*A05_S5* A05_S5
+ls A05_S5
 ```
 
 # remove the directory `A05_S5` and its contents
