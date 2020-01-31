@@ -418,11 +418,11 @@ ls -l silly
 ```
 
 ```{bash}
-chmod g+w silly/DIRdrwxrwxr-x
-chmod o-r silly/FILE-rw-r-----
-chmod g+w silly/FILE-rw-rw-r--
-chmod u+x,o-r silly/FILE-rwxr-----
-chmod ug+x,g+w silly/FILE-rwxrwxr--
+chmod 775 silly/DIRdrwxrwxr-x
+chmod 640 silly/FILE-rw-r-----
+chmod 664 silly/FILE-rw-rw-r--
+chmod 740 silly/FILE-rwxr-----
+chmod 774 silly/FILE-rwxrwxr--
 ```
 
 ```{bash}
